@@ -151,7 +151,3 @@ require plugin_root + '/redmine_ckeditor/mail_handler_patch'
 require plugin_root + '/redmine_ckeditor/pdf_patch'
 require plugin_root + '/redmine_ckeditor/tempfile_patch'
 require plugin_root + '/redmine_ckeditor/csv_export_patch'
-
-Rails.application.config.to_prepare do
-  Redmine::Export::Csv::Base.send(:include, RedmineCkeditor::CsvExportPatch)
-end
